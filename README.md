@@ -4,18 +4,28 @@
 Experience lightning-fast conversations that feel like magic ⚡ Connect with native speakers worldwide, practice new languages through real conversations, and build meaningful friendships—all through an elegant, intuitive interface. Built with cutting-edge MERN stack technology, enhanced by Stream.io's powerful chat infrastructure and Socket.IO real-time engine for seamless, lag-free language exchange that just works.
 
 ## ✨ Features
+
+### 🌍 Core Language Exchange
 | Feature | Description |
 |---------|-------------|
 | 🌍 **Language Exchange** | Connect with native speakers worldwide for authentic language practice |
-| 🔐 **Smart Profile System** | Set native & learning languages, location, and bio for perfect partner matching |
 | 👥 **Intelligent Partner Matching** | Discover language exchange partners based on your learning goals and profile |
+| 👫 **Friend System** | Send friend requests, build your language learning network |
+
+### 💬 Communication
+| Feature | Description |
+|---------|-------------|
 | 💬 **Real-Time Video Chat** | Practice speaking with video calls and screen sharing capabilities |
 | 🔔 **Smart Notifications** | Get notified about new connections, messages, and friend requests |
+
+### 🧑‍💻 User Experience
+| Feature | Description |
+|---------|-------------|
+| 🔐 **Smart Profile System** | Set native & learning languages, location, and bio for perfect partner matching |
 | 🎨 **Random Avatar Generator** | Beautiful, unique avatars generated automatically for each user |
 | 🏷️ **Language Tags** | Clear visual indicators showing native and learning languages |
 | 📱 **Responsive Design** | Mobile-first responsive UI that works seamlessly across all devices |
-| 👫 **Friend System** | Send friend requests, build your language learning network |
-| 🌐 **Global Community** | Connect with learners from different countries and cultures |
+
 
 ## 🏗️ Tech Stack
 | Layer | Technologies |
@@ -84,17 +94,22 @@ Open http://localhost:5173 → Register/Login → Complete your language profile
 ### Authentication Pages
 | Sign Up | Sign In |
 |---------|---------|
-| ![Sign Up](screenshots/signup.png) | ![Sign In](screenshots/signin.png) |
+| ![Sign Up](screenshots/SignupPage.png) | ![Sign In](screenshots/signInPage.png) |
+
+### Onboarding
+| Complete Your Profile |
+|-----------------------|
+| ![Onboarding](screenshots/onboardingPage.png) |
 
 ### Main Application
 | Language Partner Discovery | Profile Setup |
 |----------------------------|---------------|
-| ![Partner Discovery](screenshots/home.png) | ![Profile Setup](screenshots/profile.png) |
+| ![Partner Discovery](screenshots/HomePage.png) | ![Profile Setup](screenshots/ChatPage.png) |
 
 ### Communication Features  
 | Video Chat | Notifications |
 |------------|---------------|
-| ![Video Chat](screenshots/video-chat.png) | ![Notifications](screenshots/notifications.png) |
+| ![Video Chat](screenshots/videoCallingPage.png) | ![Notifications](screenshots/NotificationPage.png) |
 
 ## 📂 Folder Structure
 ```
@@ -133,7 +148,7 @@ BaatCheet/
 ├── socket/
 │   └── socketHandler.js      # Socket.IO event handlers
 │
-└── client/                   # Frontend (React + Vite)
+└── frontend/                   # Frontend (React + Vite)
     ├── public/               # Static assets
     ├── src/
     │   ├── components/       # Reusable UI components
@@ -169,11 +184,12 @@ BaatCheet/
 |-----|-------------|----------|
 | `PORT` | Server port (default: 5000) | ❌ |
 | `MONGODB_URI` | MongoDB Atlas connection string | ✅ |
-| `JWT_SECRET` | Secret key for JWT token signing | ✅ |
-| `CLIENT_URL` | Frontend URL for CORS policy | ✅ |
-| `CLOUDINARY_CLOUD_NAME` | Cloudinary cloud name (for file uploads) | ❌ |
-| `CLOUDINARY_API_KEY` | Cloudinary API key | ❌ |
-| `CLOUDINARY_API_SECRET` | Cloudinary API secret | ❌ |
+| `JWT_SECRET_KEY` | Secret key for JWT token signing | ✅ |
+| `STREAM_API_KEY` | your_stream_api_key_here | ✅ |
+| `STREAM_API_SECRET` | your_stream_api_secret_here | ✅|
+| `NODE_ENV` | production | ✅ |
+
+
 
 ⚠️ **Security Note**: Never commit `.env` file to version control. Use `.env.example` for reference.
 
